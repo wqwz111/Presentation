@@ -16,115 +16,98 @@
   --light-gray: #e0e0e0;
   --text: #212121;
   --h1: 52pt;
-  --h2: 32pt;
-  --h3: 18pt;
-  --body: 16pt;
-  --pad: 30px;
+  --h2: 28pt;
+  --h3: 16pt;
+  --body: 14pt;
+  --pad: 24px;
 }
-.reveal { font-size: 28px; }
+.reveal { font-size: 26px; }
 .reveal .slides section { padding: var(--pad); text-align: left; max-width: 1400px; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; }
 .reveal .slides section.section-divider { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .reveal h1 { color: var(--primary); font-size: var(--h1); margin-bottom: 0.4em; flex-shrink: 0; }
 .reveal h2 { color: var(--dark); font-size: var(--h2); margin-bottom: 0.3em; flex-shrink: 0; }
+.reveal h3 { font-size: var(--h3); margin: 0.2em 0; color: var(--dark); }
 .reveal p, .reveal li { color: var(--text); font-size: var(--body); line-height: 1.5; }
 .reveal ul { margin-left: 1em; }
 
 /* 布局工具 */
-.space-between { display: flex; justify-content: space-between; gap: 30px; flex: 1; }
-.col { display: flex; flex-direction: column; gap: 16px; }
-.row { display: flex; gap: 20px; align-items: flex-start; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; flex: 1; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.col { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 
 /* 卡片 */
-.card { border: 2px solid var(--light-gray); border-radius: 10px; padding: 14px; text-align: left; background: #fafafa; box-sizing: border-box; }
-.card-icon { font-size: 36px; color: var(--primary); margin-bottom: 6px; text-align: center; }
-.card h3 { font-size: var(--h3); margin: 0.2em 0; color: var(--dark); }
-.card p { font-size: 14pt; color: var(--gray); margin: 0; line-height: 1.4; }
+.card { border: 2px solid var(--light-gray); border-radius: 10px; padding: 12px; text-align: left; background: #fafafa; box-sizing: border-box; }
+.card-icon { font-size: 32px; color: var(--primary); margin-bottom: 4px; text-align: center; }
+.card p { font-size: 13pt; color: var(--gray); margin: 0; line-height: 1.4; }
 
 /* 流程条 */
-.step-bar { display: flex; justify-content: space-between; margin: 20px 0; position: relative; padding: 0 20px; flex-shrink: 0; }
-.step-bar::before { content: ''; position: absolute; top: 24px; left: 40px; right: 40px; height: 3px; background: var(--light-gray); z-index: 0; }
-.step { position: relative; z-index: 1; text-align: center; width: 16%; }
-.step-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 12pt; }
-.step span { font-size: 10pt; color: var(--gray); display: block; line-height: 1.2; }
-
-/* 对比卡片 */
-.compare-card { display: flex; flex-direction: column; gap: 12px; flex: 1; }
-.compare-card h3 { font-size: 18pt; margin: 0; color: var(--primary); }
-.compare-card p { font-size: 14pt; margin: 0; }
-.feature-row { display: flex; align-items: baseline; gap: 10px; margin: 6px 0; font-size: 15pt; }
-.feature-row i { color: var(--primary); }
+.step-bar { display: flex; justify-content: space-between; margin: 16px 0; position: relative; padding: 0 16px; flex-shrink: 0; }
+.step-bar::before { content: ''; position: absolute; top: 22px; left: 40px; right: 40px; height: 3px; background: var(--light-gray); z-index: 0; }
+.step { position: relative; z-index: 1; text-align: center; width: 14%; }
+.step-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; font-weight: bold; font-size: 11pt; }
+.step span { font-size: 9pt; color: var(--gray); display: block; line-height: 1.2; }
 
 /* 信息图 */
-.infographic { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
-.infographic-item { display: flex; align-items: center; gap: 12px; padding: 8px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid var(--primary); }
-.infographic-item i { color: var(--primary); font-size: 24px; }
-.infographic-item span { font-size: 15pt; }
+.infographic { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.infographic-item { display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: #f5f5f5; border-radius: 6px; border-left: 3px solid var(--primary); }
+.infographic-item i { color: var(--primary); font-size: 20px; }
+.infographic-item span { font-size: 13pt; }
+
+/* 对比卡片 */
+.compare-card { display: flex; flex-direction: column; gap: 10px; }
+.compare-card p { font-size: 13pt; margin: 0; }
+.feature-row { display: flex; align-items: baseline; gap: 8px; margin: 4px 0; font-size: 14pt; }
+.feature-row i { color: var(--primary); }
 
 /* 表格 */
-.data-table { width: 100%; border-collapse: collapse; font-size: 13pt; margin-top: 8px; }
-.data-table th, .data-table td { border: 1px solid var(--light-gray); padding: 10px; text-align: left; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 12pt; margin-top: 6px; }
+.data-table th, .data-table td { border: 1px solid var(--light-gray); padding: 8px; text-align: left; }
 .data-table th { background: var(--primary); color: white; font-weight: 600; }
 .data-table td { background: #f9f9f9; }
-
-/* 徽章 */
-.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10pt; background: var(--primary); color: white; margin-left: 6px; }
-
-/* 调整层级撑开 */
-.fill-vertical { flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
   <div class='reveal'>
     <div class='slides'>
 
-      <!-- 第1页 封面（不含团队） -->
+      <!-- 第1页 封面 -->
       <section class='section-divider'>
         <h1 style='font-size: 56pt;'>AI 驱动<br>研究报告生产系统</h1>
         <p style='font-size: 22pt; color: var(--gray); margin-top: 0.5em;'>案例展示</p>
       </section>
 
-      <!-- 第2页 团队介绍 -->
+      <!-- 第2页 团队 + 系统目标 -->
       <section>
-        <h2>👥 团队成员（1:N:1:1:N）</h2>
-        <div class='grid-4' style='gap: 16px; flex:1;'>
+        <h2>👥 团队成员</h2>
+        <div class='grid-4' style='gap: 10px;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-chess-king'></i></div>
             <h3>主编</h3>
             <p><strong>数量：</strong>1</p>
             <p><strong>职责：</strong>选题策划、计划制定、Issue 管理、质控、发布分发</p>
-            <p><strong>产出：</strong>计划文档、Issue 分类、评审裁决</p>
           </div>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-microscope'></i></div>
             <h3>探针</h3>
             <p><strong>数量：</strong>N（按专题动态增减）</p>
             <p><strong>职责：</strong>搜索素材（3 轮以上）、撰写报告正文（含 Mermaid）</p>
-            <p><strong>产出：</strong>.md 报告 + Mermaid 图表</p>
           </div>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-palette'></i></div>
             <h3>调色板</h3>
             <p><strong>数量：</strong>1</p>
             <p><strong>职责：</strong>HTML 模板维护、CSS 设计、首页卡片、批量生成 HTML</p>
-            <p><strong>产出：</strong>base.html + md2html.js</p>
           </div>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-users'></i></div>
             <h3>读者</h3>
             <p><strong>数量：</strong>N（每篇报告 1-3 名）</p>
             <p><strong>职责：</strong>独立审稿（准确性/可读性/完整性）、提交评审意见</p>
-            <p><strong>产出：</strong>review-*.md + Issue 评论</p>
           </div>
         </div>
-      </section>
 
-      <!-- 第3页 系统目标 -->
-      <section>
-        <h2>🎯 系统目标</h2>
-        <div class='grid-4' style='gap: 16px; flex:1;'>
+        <h2 style='margin-top: 30px;'>🎯 系统目标</h2>
+        <div class='grid-4' style='gap: 10px; flex:1;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-bolt'></i></div>
             <h3>选题自动化</h3>
@@ -148,7 +131,7 @@
         </div>
       </section>
 
-      <!-- 第4页 工作流程 -->
+      <!-- 第3页 工作流程 -->
       <section>
         <h2>🔄 完整工作流程（从选题到发布）</h2>
         <div class='step-bar'>
@@ -180,21 +163,21 @@
         </div>
       </section>
 
-      <!-- 第5页 架构+部署 -->
+      <!-- 第4页 架构+部署 -->
       <section>
         <h2>⚙️ 技术架构 & 部署视图</h2>
         <div class='grid-2' style='gap: 30px; flex:1;'>
           <div class='col'>
             <h3>系统架构</h3>
-            <div class='layered-arch' style='gap:10px; margin-top: 8px;'>
+            <div class='layered-arch' style='gap:8px; margin-top: 8px;'>
               <div class='layer' style='background: #f5f5f5;'><i class='fa-solid fa-layer-group'></i> 用户接口层<sub>GitHub Issues + Telegram Bot</sub></div>
               <div class='layer' style='background: #f5f5f5;'><i class='fa-solid fa-brain'></i> OpenClaw 编排层<sub>主编 Agent</sub></div>
-              <div class='layer' style='flex-direction: column; gap:8px; background: #f5f5f5;'>
-                <div style='display: flex; gap:8px;'>
-                  <div style='flex:1; border:1px dashed var(--primary); border-radius:8px; padding:8px; text-align:center;'>
+              <div class='layer' style='flex-direction: column; gap:6px; background: #f5f5f5;'>
+                <div style='display: flex; gap:6px;'>
+                  <div style='flex:1; border:1px dashed var(--primary); border-radius:8px; padding:6px; text-align:center;'>
                     <i class='fa-solid fa-microscope'></i><br>探针 × N<sub>搜索+撰写+Mermaid</sub>
                   </div>
-                  <div style='flex:1; border:1px dashed #d32f2f; border-radius:8px; padding:8px; text-align:center;'>
+                  <div style='flex:1; border:1px dashed #d32f2f; border-radius:8px; padding:6px; text-align:center;'>
                     <i class='fa-solid fa-palette'></i><br>调色板 × 1<sub>md2html+CSS</sub>
                   </div>
                 </div>
@@ -211,16 +194,16 @@
               <div class='infographic-item'><i class='fa-solid fa-folder-tree'></i><span>本地模板 + 转换脚本</span></div>
               <div class='infographic-item'><i class='fa-solid fa-key'></i><span>环境变量配置（API Key）</span></div>
             </div>
-            <h3 style='margin-top: 20px;'>模型方案</h3>
-            <pre style='font-size:11pt; margin:0; background:#f5f5f5; padding:8px; border-radius:6px;'>"primary": "openrouter/healer-alpha"</pre>
+            <h3 style='margin-top: 16px;'>模型方案</h3>
+            <pre style='font-size:10pt; margin:0; background:#f5f5f5; padding:8px; border-radius:6px;'>"primary": "openrouter/healer-alpha"</pre>
           </div>
         </div>
       </section>
 
-      <!-- 第6页 对比+指标 -->
+      <!-- 第5页 对比+指标 -->
       <section>
         <h2>⚖️ AI团队 vs 传统方式 & 核心成果</h2>
-        <div class='grid-2' style='gap: 20px; flex:0 0 auto;'>
+        <div class='grid-2' style='gap: 16px; flex:0 0 auto;'>
           <div class='card'>
             <h3><i class='fa-solid fa-robot'></i> AI 团队</h3>
             <div class='compare-card'>
@@ -228,10 +211,9 @@
               <div class='feature-row'><i class='fa-solid fa-gauge-high'></i> 速度：单篇 5 分钟</div>
               <div class='feature-row'><i class='fa-solid fa-coins'></i> 成本：≈$0.1/篇</div>
               <div class='feature-row'><i class='fa-solid fa-chart-line'></i> 一致性：评分 88-91%</div>
-              <div class='feature-row'><i class='fa-solid fa-up-right-and-down-left-from-center'></i> 规模：弹性伸缩</div>
               <p style='margin-top:6px;'><strong>劣势：</strong></p>
               <div class='feature-row'><i class='fa-solid fa-lightbulb'></i> 原创观点有限</div>
-              <div class='feature-row'><i class='fa-solid fa-triangle-exclamation'></i> 依赖搜索与模型幻觉</div>
+              <div class='feature-row'><i class='fa-solid fa-triangle-exclamation'></i> 模型幻觉风险</div>
             </div>
           </div>
           <div class='card'>
@@ -247,7 +229,7 @@
             </div>
           </div>
         </div>
-        <div style='flex:1; display:flex; flex-direction:column; margin-top:20px;'>
+        <div style='flex:1; display:flex; flex-direction:column; margin-top:16px;'>
           <h3>核心指标与成果（Tech-Researcher 项目）</h3>
           <table class='data-table'>
             <thead><tr><th>指标</th><th>数值</th><th>备注</th></tr></thead>
@@ -264,10 +246,10 @@
         </div>
       </section>
 
-      <!-- 第7页 应用场景 + 模式 -->
+      <!-- 第6页 应用场景 + 模式 -->
       <section>
         <h2>🧩 应用场景 & 设计模式</h2>
-        <div class='grid-2' style='gap: 16px; flex:1;'>
+        <div class='grid-2' style='gap: 14px; flex:1;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-blog'></i></div>
             <h3>技术博客</h3>
@@ -293,8 +275,8 @@
             <p><strong>方案：</strong>关键词监控 + 官网抓取 + 对比报告</p>
           </div>
         </div>
-        <div style='margin-top: 16px; padding: 12px; background: #f5f5f5; border-radius: 10px; border-left: 4px solid var(--primary);'>
-          <h3 style='margin:0 0 8px;'><i class='fa-solid fa-microchip'></i> 设计模式：AI 流水线工厂</h3>
+        <div style='margin-top: 14px; padding: 10px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid var(--primary);'>
+          <h3 style='margin:0 0 6px;'><i class='fa-solid fa-microchip'></i> 设计模式：AI 流水线工厂</h3>
           <div class='infographic'>
             <div class='infographic-item'><i class='fa-solid fa-chess-king'></i><span>调度器（主编）：任务分派与协调</span></div>
             <div class='infographic-item'><i class='fa-solid fa-gears'></i><span>Worker（探针）：核心生产</span></div>
