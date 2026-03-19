@@ -15,55 +15,62 @@
   --gray: #757575;
   --light-gray: #e0e0e0;
   --text: #212121;
-  --h1: 52pt;
-  --h2: 28pt;
-  --h3: 16pt;
-  --body: 14pt;
-  --pad: 24px;
+  --h1: 46pt;
+  --h2: 26pt;
+  --h3: 15pt;
+  --body: 13pt;
+  --pad: 20px;
 }
-.reveal { font-size: 26px; }
+.reveal { font-size: 24px; }
 .reveal .slides section { padding: var(--pad); text-align: left; max-width: 1400px; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; }
 .reveal .slides section.section-divider { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.reveal h1 { color: var(--primary); font-size: var(--h1); margin-bottom: 0.4em; flex-shrink: 0; }
-.reveal h2 { color: var(--dark); font-size: var(--h2); margin-bottom: 0.3em; flex-shrink: 0; }
-.reveal h3 { font-size: var(--h3); margin: 0.2em 0; color: var(--dark); }
-.reveal p, .reveal li { color: var(--text); font-size: var(--body); line-height: 1.5; }
-.reveal ul { margin-left: 1em; }
+.reveal h1 { color: var(--primary); font-size: var(--h1); margin-bottom: 0.3em; flex-shrink: 0; }
+.reveal h2 { color: var(--dark); font-size: var(--h2); margin-bottom: 0.2em; flex-shrink: 0; }
+.reveal h3 { font-size: var(--h3); margin: 0.15em 0; color: var(--dark); }
+.reveal p, .reveal li { color: var(--text); font-size: var(--body); line-height: 1.45; }
+.reveal ul { margin-left: 0.8em; }
 
-/* 布局工具 */
-.col { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+/* 布局 */
+.col { display: flex; flex-direction: column; gap: 10px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.fill-vertical { flex: 1; display: flex; flex-direction: column; }
 
 /* 卡片 */
-.card { border: 2px solid var(--light-gray); border-radius: 10px; padding: 12px; text-align: left; background: #fafafa; box-sizing: border-box; }
-.card-icon { font-size: 32px; color: var(--primary); margin-bottom: 4px; text-align: center; }
-.card p { font-size: 13pt; color: var(--gray); margin: 0; line-height: 1.4; }
+.card { border: 2px solid var(--light-gray); border-radius: 10px; padding: 10px; text-align: left; background: #fafafa; box-sizing: border-box; flex: 1; display: flex; flex-direction: column; }
+.card-icon { font-size: 28px; color: var(--primary); margin-bottom: 4px; text-align: center; flex-shrink: 0; }
+.card p { font-size: 12pt; color: var(--gray); margin: 0; line-height: 1.4; flex: 1; }
 
 /* 流程条 */
-.step-bar { display: flex; justify-content: space-between; margin: 16px 0; position: relative; padding: 0 16px; flex-shrink: 0; }
-.step-bar::before { content: ''; position: absolute; top: 22px; left: 40px; right: 40px; height: 3px; background: var(--light-gray); z-index: 0; }
-.step { position: relative; z-index: 1; text-align: center; width: 14%; }
-.step-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; font-weight: bold; font-size: 11pt; }
-.step span { font-size: 9pt; color: var(--gray); display: block; line-height: 1.2; }
+.step-bar { display: flex; justify-content: space-between; margin: 12px 0; position: relative; padding: 0 12px; flex-shrink: 0; }
+.step-bar::before { content: ''; position: absolute; top: 20px; left: 40px; right: 40px; height: 3px; background: var(--light-gray); z-index: 0; }
+.step { position: relative; z-index: 1; text-align: center; width: 12%; }
+.step-circle { width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; font-weight: bold; font-size: 10pt; }
+.step span { font-size: 8pt; color: var(--gray); display: block; line-height: 1.2; }
 
 /* 信息图 */
-.infographic { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-.infographic-item { display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: #f5f5f5; border-radius: 6px; border-left: 3px solid var(--primary); }
-.infographic-item i { color: var(--primary); font-size: 20px; }
-.infographic-item span { font-size: 13pt; }
+.infographic { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+.infographic-item { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #f5f5f5; border-radius: 6px; border-left: 3px solid var(--primary); }
+.infographic-item i { color: var(--primary); font-size: 18px; }
+.infographic-item span { font-size: 12pt; }
 
 /* 对比卡片 */
-.compare-card { display: flex; flex-direction: column; gap: 10px; }
-.compare-card p { font-size: 13pt; margin: 0; }
-.feature-row { display: flex; align-items: baseline; gap: 8px; margin: 4px 0; font-size: 14pt; }
+.compare-card { display: flex; flex-direction: column; gap: 8px; }
+.compare-card p { font-size: 12pt; margin: 0; }
+.feature-row { display: flex; align-items: baseline; gap: 6px; margin: 3px 0; font-size: 13pt; }
 .feature-row i { color: var(--primary); }
 
 /* 表格 */
-.data-table { width: 100%; border-collapse: collapse; font-size: 12pt; margin-top: 6px; }
-.data-table th, .data-table td { border: 1px solid var(--light-gray); padding: 8px; text-align: left; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 11pt; margin-top: 6px; }
+.data-table th, .data-table td { border: 1px solid var(--light-gray); padding: 6px; text-align: left; }
 .data-table th { background: var(--primary); color: white; font-weight: 600; }
 .data-table td { background: #f9f9f9; }
+
+/* 层状架构 (用在部署页) */
+.layered-arch { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.layer { border: 2px solid var(--primary); border-radius: 8px; padding: 8px 12px; text-align: center; font-size: 13pt; background: white; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.layer i { color: var(--primary); font-size: 18pt; }
+.layer sub { display: block; font-size: 9pt; color: var(--gray); margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -77,9 +84,9 @@
       </section>
 
       <!-- 第2页 团队 + 系统目标 -->
-      <section>
+      <section class='fill-vertical'>
         <h2>👥 团队成员</h2>
-        <div class='grid-4' style='gap: 10px;'>
+        <div class='grid-4' style='gap: 10px; flex:1;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-chess-king'></i></div>
             <h3>主编</h3>
@@ -106,7 +113,7 @@
           </div>
         </div>
 
-        <h2 style='margin-top: 30px;'>🎯 系统目标</h2>
+        <h2>🎯 系统目标</h2>
         <div class='grid-4' style='gap: 10px; flex:1;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-bolt'></i></div>
@@ -132,7 +139,7 @@
       </section>
 
       <!-- 第3页 工作流程 -->
-      <section>
+      <section class='fill-vertical'>
         <h2>🔄 完整工作流程（从选题到发布）</h2>
         <div class='step-bar'>
           <div class='step'><div class='step-circle'>1</div><span>主编分类</span></div>
@@ -143,8 +150,8 @@
           <div class='step'><div class='step-circle'>6</div><span>发布 & 评审</span></div>
           <div class='step'><div class='step-circle'>7</div><span>裁决归档</span></div>
         </div>
-        <div class='space-between' style='margin-top: 20px;'>
-          <div class='col' style='flex:1;'>
+        <div class='grid-2' style='gap: 12px; flex:1; margin-top: 8px;'>
+          <div class='col'>
             <h3>关键数据</h3>
             <div class='infographic'>
               <div class='infographic-item'><i class='fa-solid fa-clock'></i><span>平均耗时：5 分钟/篇</span></div>
@@ -152,7 +159,7 @@
               <div class='infographic-item'><i class='fa-solid fa-bug-slash'></i><span>P0 问题：0 个</span></div>
             </div>
           </div>
-          <div class='col' style='flex:1;'>
+          <div class='col'>
             <h3>并发能力</h3>
             <div class='infographic'>
               <div class='infographic-item'><i class='fa-solid fa-microchip'></i><span>2 个探针并行</span></div>
@@ -164,12 +171,12 @@
       </section>
 
       <!-- 第4页 架构+部署 -->
-      <section>
+      <section class='fill-vertical'>
         <h2>⚙️ 技术架构 & 部署视图</h2>
-        <div class='grid-2' style='gap: 30px; flex:1;'>
+        <div class='grid-2' style='gap: 20px; flex:1;'>
           <div class='col'>
             <h3>系统架构</h3>
-            <div class='layered-arch' style='gap:8px; margin-top: 8px;'>
+            <div class='layered-arch' style='gap:8px; margin-top: 6px; flex:1;'>
               <div class='layer' style='background: #f5f5f5;'><i class='fa-solid fa-layer-group'></i> 用户接口层<sub>GitHub Issues + Telegram Bot</sub></div>
               <div class='layer' style='background: #f5f5f5;'><i class='fa-solid fa-brain'></i> OpenClaw 编排层<sub>主编 Agent</sub></div>
               <div class='layer' style='flex-direction: column; gap:6px; background: #f5f5f5;'>
@@ -194,16 +201,16 @@
               <div class='infographic-item'><i class='fa-solid fa-folder-tree'></i><span>本地模板 + 转换脚本</span></div>
               <div class='infographic-item'><i class='fa-solid fa-key'></i><span>环境变量配置（API Key）</span></div>
             </div>
-            <h3 style='margin-top: 16px;'>模型方案</h3>
+            <h3 style='margin-top: 12px;'>模型方案</h3>
             <pre style='font-size:10pt; margin:0; background:#f5f5f5; padding:8px; border-radius:6px;'>"primary": "openrouter/healer-alpha"</pre>
           </div>
         </div>
       </section>
 
       <!-- 第5页 对比+指标 -->
-      <section>
+      <section class='fill-vertical'>
         <h2>⚖️ AI团队 vs 传统方式 & 核心成果</h2>
-        <div class='grid-2' style='gap: 16px; flex:0 0 auto;'>
+        <div class='grid-2' style='gap: 12px; flex:0 0 auto;'>
           <div class='card'>
             <h3><i class='fa-solid fa-robot'></i> AI 团队</h3>
             <div class='compare-card'>
@@ -229,7 +236,7 @@
             </div>
           </div>
         </div>
-        <div style='flex:1; display:flex; flex-direction:column; margin-top:16px;'>
+        <div style='flex:1; display:flex; flex-direction:column; margin-top:12px;'>
           <h3>核心指标与成果（Tech-Researcher 项目）</h3>
           <table class='data-table'>
             <thead><tr><th>指标</th><th>数值</th><th>备注</th></tr></thead>
@@ -247,9 +254,9 @@
       </section>
 
       <!-- 第6页 应用场景 + 模式 -->
-      <section>
+      <section class='fill-vertical'>
         <h2>🧩 应用场景 & 设计模式</h2>
-        <div class='grid-2' style='gap: 14px; flex:1;'>
+        <div class='grid-2' style='gap: 12px; flex:1;'>
           <div class='card'>
             <div class='card-icon'><i class='fa-solid fa-blog'></i></div>
             <h3>技术博客</h3>
@@ -275,7 +282,7 @@
             <p><strong>方案：</strong>关键词监控 + 官网抓取 + 对比报告</p>
           </div>
         </div>
-        <div style='margin-top: 14px; padding: 10px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid var(--primary);'>
+        <div style='margin-top: 12px; padding: 10px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid var(--primary); flex-shrink: 0;'>
           <h3 style='margin:0 0 6px;'><i class='fa-solid fa-microchip'></i> 设计模式：AI 流水线工厂</h3>
           <div class='infographic'>
             <div class='infographic-item'><i class='fa-solid fa-chess-king'></i><span>调度器（主编）：任务分派与协调</span></div>
