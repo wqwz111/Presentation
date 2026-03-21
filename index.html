@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section class="section-divider">
+        <h1>OpenClaw + Cursor</h1>
+      </section>
+      <section>
+        <div class="content">
+<p># OpenClaw + Cursor</p>
+
+        </div>
+      </section>
+      <section>
+        <h2>AI Agent 软件开发团队</h2>
+        <div class="content">
+<p>## AI Agent 软件开发团队</p>
+<h3 style='margin: 12px 0 6px; font-size: var(--h3-size);'>目录</h3>
+<p>### 目录</p>
+<ul>
+<li>什么是 OpenClaw</li>
+<li>什么是 Cursor</li>
+<li>协同优势</li>
+<li>团队架构</li>
+<li>开发工作流</li>
+<li>案例：技能开发流程</li>
+<li>成果与数据</li>
+<li>SWOT 分析</li>
+<li>未来规划</li>
+</ul>
+
+        </div>
+      </section>
+      <section>
+        <h2>什么是 OpenClaw</h2>
+        <div class="content">
+<p># 什么是 OpenClaw</p>
+<ul>
+<li>**定位**：开源 AI Agent 运行时平台</li>
+<li>**核心能力**：多通道消息、工具集成、安全沙箱</li>
+<li>**生态**：支持自定义技能 (Skills)</li>
+<li>**部署**：VPS、本地、云原生</li>
+</ul>
+<blockquote>&gt; "让 AI 真正成为你的工作伙伴"</blockquote>
+<p>&gt; "让 AI 真正成为你的工作伙伴"</p>
+
+        </div>
+      </section>
+      <section>
+        <h2>什么是 Cursor</h2>
+        <div class="content">
+<p># 什么是 Cursor</p>
+<ul>
+<li>**定位**：AI 驱动的代码编辑器</li>
+<li>**核心能力**：代码补全、重构、调试、自动生成</li>
+<li>**模型**：Claude、GPT、DeepSeek 等</li>
+<li>**工作流**：对话式编程，/-commands</li>
+</ul>
+<blockquote>&gt; "编程的未来是对话式"</blockquote>
+<p>&gt; "编程的未来是对话式"</p>
+
+        </div>
+      </section>
+      <section>
+        <h2>协同优势</h2>
+        <div class="content">
+<p># 协同优势</p>
+<table style='width:100%; border-collapse:collapse; margin:8px 0; font-size:var(--text-size);'>
+<tr><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>维度</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>OpenClaw</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>Cursor</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>结合效果</td></tr>
+<tr><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>------</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>----------</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>--------</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>----------</td></tr>
+<tr><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>角色</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>运行时 / 部署</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>开发环境</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>闭环</td></tr>
+<tr><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>strengths</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>多通道、安全</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>AI 编程、编辑</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>1+1&gt;2</td></tr>
+<tr><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>集成</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>REST/CLI</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>API 调用</td><td style='border:1px solid var(--line-color,#ccc); padding:6px; text-align:left;'>无缝连接</td></tr>
+</table>
+<blockquote>&gt; OpenClaw 提供舞台，Cursor 编写剧本</blockquote>
+<p>&gt; OpenClaw 提供舞台，Cursor 编写剧本</p>
+</table>
+
+        </div>
+      </section>
+      <section>
+  <h2>团队架构</h2>
+  <div class="content">
+    <div class="grid-4" style="gap: 12px; flex: 1; align-content: start;">
+      <div class="card" style="align-items: center; text-align: center; padding: 16px 12px;">
+        <img src="https://i.pravatar.cc/150?img=1" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--primary, #e53935); margin-bottom: 8px;">
+        <h4 style="margin: 0 0 4px; font-size: 14pt; color: var(--text, #333);">CLAUDE</h4>
+        <p style="font-size: 10pt; color: var(--muted, #666); margin: 0;">架构师</p>
+        <p style="font-size: 10pt; margin: 8px 0 0; line-height: 1.4;">系统设计专家，OpenClaw 核心贡献者。</p>
+      </div>
+      <div class="card" style="align-items: center; text-align: center; padding: 16px 12px;">
+        <img src="https://i.pravatar.cc/150?img=12" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--secondary, #ff9800); margin-bottom: 8px;">
+        <h4 style="margin: 0 0 4px; font-size: 14pt; color: var(--text, #333);">GPT-4</h4>
+        <p style="font-size: 10pt; color: var(--muted, #666); margin: 0;">全栈工程师</p>
+        <p style="font-size: 10pt; margin: 8px 0 0; line-height: 1.4;">快速原型开发，Cursor 高级用户。</p>
+      </div>
+      <div class="card" style="align-items: center; text-align: center; padding: 16px 12px;">
+        <img src="https://i.pravatar.cc/150?img=8" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--primary, #e53935); margin-bottom: 8px;">
+        <h4 style="margin: 0 0 4px; font-size: 14pt; color: var(--text, #333);">DEEPSEEK</h4>
+        <p style="font-size: 10pt; color: var(--muted, #666); margin: 0;">DevOps</p>
+        <p style="font-size: 10pt; margin: 8px 0 0; line-height: 1.4;">自动化部署，性能优化专家。</p>
+      </div>
+      <div class="card" style="align-items: center; text-align: center; padding: 16px 12px;">
+        <img src="https://i.pravatar.cc/150?img=5" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--secondary, #ff9800); margin-bottom: 8px;">
+        <h4 style="margin: 0 0 4px; font-size: 14pt; color: var(--text, #333);">MISTRAL</h4>
+        <p style="font-size: 10pt; color: var(--muted, #666); margin: 0;">测试负责人</p>
+        <p style="font-size: 10pt; margin: 8px 0 0; line-height: 1.4;">质量保障，自动化测试框架。</p>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+  <h2>开发工作流</h2>
+  <div class="content">
+    <div class="col" style="gap: 10px; position: relative; padding-left: 30px;">
+      <div style="position: absolute; left: 12px; top: 8px; bottom: 8px; width: 3px; background: var(--primary, #e53935); border-radius: 2px;"></div>
+      <div class="infographic-item" style="position: relative;">
+        <i class="fa-solid fa-circle" style="font-size: 20px; position: absolute; left: -30px; top: 6px; background: white; padding: 4px; color: var(--primary, #e53935);"></i>
+        <span><strong>阶段 1:</strong> 需求分析 - Cursor 对话生成 PRD</span>
+      </div>
+      <div class="infographic-item" style="position: relative;">
+        <i class="fa-solid fa-circle" style="font-size: 20px; position: absolute; left: -30px; top: 6px; background: white; padding: 4px; color: var(--primary, #e53935);"></i>
+        <span><strong>阶段 2:</strong> 技能设计 - OpenClaw 定义 API 规范</span>
+      </div>
+      <div class="infographic-item" style="position: relative;">
+        <i class="fa-solid fa-circle" style="font-size: 20px; position: absolute; left: -30px; top: 6px; background: white; padding: 4px; color: var(--primary, #e53935);"></i>
+        <span><strong>阶段 3:</strong> 编码实现 - Cursor 自动生成代码</span>
+      </div>
+      <div class="infographic-item" style="position: relative;">
+        <i class="fa-solid fa-circle" style="font-size: 20px; position: absolute; left: -30px; top: 6px; background: white; padding: 4px; color: var(--primary, #e53935);"></i>
+        <span><strong>阶段 4:</strong> 测试验证 - 运行沙箱测试</span>
+      </div>
+      <div class="infographic-item" style="position: relative;">
+        <i class="fa-solid fa-circle" style="font-size: 20px; position: absolute; left: -30px; top: 6px; background: white; padding: 4px; color: var(--primary, #e53935);"></i>
+        <span><strong>阶段 5:</strong> 部署发布 - 一键发布到 OpenClaw</span>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+  <h2>案例：技能开发流程</h2>
+  <div class="content">
+    <div class="grid-3" style="gap: 12px; flex: 1; align-content: start;">
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 42pt; font-weight: bold; color: var(--primary, #e53935);">2.4M</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">技能调用次数</div>
+      </div>
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 42pt; font-weight: bold; color: var(--secondary, #ff9800);">847</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">已发布技能</div>
+      </div>
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 42pt; font-weight: bold; color: var(--primary, #e53935);">40%</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">效率提升</div>
+      </div>
+    </div>
+    <div style="margin-top: 16px; font-size: 14pt; line-height: 1.6;">
+      <p><strong>开发周期示例：</strong></p>
+      <ul>
+        <li>需求分析：2 天</li>
+        <li>Skill 设计：3 天</li>
+        <li>实现测试：5 天</li>
+        <li>文档发布：1 天</li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section>
+  <h2>成果与数据</h2>
+  <div class="content">
+    <div class="grid-3" style="gap: 12px; flex: 1; align-content: start;">
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 48pt; font-weight: bold; color: var(--primary, #e53935);">2.4M</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">总调用次数</div>
+        <div style="font-size: 11pt; color: var(--muted, #999); margin-top: 2px;"><i class="fa-solid fa-arrow-trend-up" style="color: #4caf50;"></i> +23%</div>
+      </div>
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 48pt; font-weight: bold; color: var(--secondary, #ff9800);">847</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">活跃技能</div>
+        <div style="font-size: 11pt; color: var(--muted, #999); margin-top: 2px;"><i class="fa-solid fa-arrow-trend-up" style="color: #4caf50;"></i> +12%</div>
+      </div>
+      <div class="card" style="align-items: center; text-align: center;">
+        <div style="font-size: 48pt; font-weight: bold; color: var(--primary, #e53935);">99.9%</div>
+        <div style="font-size: 12pt; color: var(--gray, #666); margin-top: 4px;">系统可用性</div>
+        <div style="font-size: 11pt; color: var(--muted, #999); margin-top: 2px;">全年零故障</div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+  <h2>SWOT 分析</h2>
+  <div class="content">
+    <div style="flex:1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; min-height: 0; min-width: 0;">
+      <div class="card" style="border-top: 4px solid #4caf50; background: rgba(76,175,80,0.05);">
+        <h3 style="color: #4caf50; margin: 0 0 8px; font-size: 14pt;"><i class="fa-solid fa-check-circle"></i> 优势 (S)</h3>
+        <ul style="margin: 0; padding-left: 1.2em; font-size: 11pt; line-height: 1.6;">
+          <li>AI 自动编程大幅提升效率</li>
+          <li>OpenClaw 运行时安全稳定</li>
+          <li>团队熟练掌握 Cursor 工作流</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top: 4px solid #e53935; background: rgba(233,30,99,0.05);">
+        <h3 style="color: #e53935; margin: 0 0 8px; font-size: 14pt;"><i class="fa-solid fa-times-circle"></i> 劣势 (W)</h3>
+        <ul style="margin: 0; padding-left: 1.2em; font-size: 11pt; line-height: 1.6;">
+          <li>依赖外部 AI API 成本较高</li>
+          <li>调试复杂 Agent 流程仍需人工</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top: 4px solid #2196F3; background: rgba(33,150,243,0.05);">
+        <h3 style="color: #2196F3; margin: 0 0 8px; font-size: 14pt;"><i class="fa-solid fa-lightbulb"></i> 机会 (O)</h3>
+        <ul style="margin: 0; padding-left: 1.2em; font-size: 11pt; line-height: 1.6;">
+          <li>企业级 AI Agent 市场快速增长</li>
+          <li>OpenClaw 插件生态可扩展</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top: 4px solid #ff9800; background: rgba(255,152,0,0.05);">
+        <h3 style="color: #ff9800; margin: 0 0 8px; font-size: 14pt;"><i class="fa-solid fa-triangle-exclamation"></i> 威胁 (T)</h3>
+        <ul style="margin: 0; padding-left: 1.2em; font-size: 11pt; line-height: 1.6;">
+          <li>竞争产品增多</li>
+          <li>AI 模型迭代风险</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+  <h2>未来规划</h2>
+  <div class="content">
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; position: relative; padding-left: 40px; margin-top: 20px;">
+      <div style="position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: var(--primary, #e53935); border-radius: 2px;"></div>
+      <div class="infographic-item" style="position: relative; background: rgba(var(--primary-rgb), 0.08); border-left-color: var(--primary, #e53935);">
+        <i class="fa-solid fa-flag-checkered" style="color: var(--primary, #e53935); font-size: 20px; position: absolute; left: -38px; top: 6px; background: white; padding: 4px;"></i>
+        <span><strong>Q2 2024</strong><br><span style="font-size: 11pt; color: var(--gray);">插件市场上线，社区技能共享</span></span>
+      </div>
+      <div class="infographic-item" style="position: relative; background: rgba(var(--primary-rgb), 0.08); border-left-color: var(--primary, #e53935);">
+        <i class="fa-solid fa-rocket" style="color: var(--primary, #e53935); font-size: 20px; position: absolute; left: -38px; top: 6px; background: white; padding: 4px;"></i>
+        <span><strong>Q3 2024</strong><br><span style="font-size: 11pt; color: var(--gray);">多租户支持，企业级部署</span></span>
+      </div>
+      <div class="infographic-item" style="position: relative; background: rgba(var(--primary-rgb), 0.08); border-left-color: var(--primary, #e53935);">
+        <i class="fa-solid fa-trophy" style="color: var(--primary, #e53935); font-size: 20px; position: absolute; left: -38px; top: 6px; background: white; padding: 4px;"></i>
+        <span><strong>Q4 2024</strong><br><span style="font-size: 11pt; color: var(--gray);">企业版发布，SLA 保障</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+        <h2>Q&A</h2>
+        <div class="content">
+<p># Q&A</p>
+<p>**感谢聆听**</p>
+<p>有问题请随时提问！</p>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>Reveal.initialize({width:1280,height:720,margin:0,controls:true,progress:true,slideNumber:false,hash:true,transition:"slide",center:false});</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Vibrant Orange Theme - 活力橙
+ * Energetic, youthful, great for startups and creative pitches.
+ */
+
+:root {
+  --background-color: #fff5e6;      /* 浅橙白 */
+  --section-divider-bg: #ff6b35;   /* 活力橙标题背景 */
+
+  --heading-font: "Montserrat", "Arial Rounded MT", sans-serif;
+  --body-font: "Open Sans", "Helvetica Neue", sans-serif;
+  --base-font-size: 32px;
+  --text-size: 16pt;
+  --h1-size: 48pt;
+  --h2-size: 36pt;
+  --h3-size: 24pt;
+
+  --primary-color: #ff6b35;       /* 主橙 */
+  --secondary-color: #d72638;     /* 红色强调 */
+  --text-color: #2d2d2d;
+  --muted-color: #777;
+  --line-color: #ffb89a;
+
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 30px;
+  --box-radius: 12px;
+}
+
+.reveal { font-family: var(--body-font); font-size: var(--base-font-size); }
+.reveal-viewport { background-color: var(--background-color); }
+.reveal-viewport.is-section-divider .slide-background.present { background-color: var(--section-divider-bg) !important; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.reveal h1 { font-size: var(--h1-size); margin-bottom: 0.3em; text-shadow: 2px 2px 0 rgba(255,107,53,0.2); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0.2em; }
+.reveal h3 { font-size: var(--h3-size); }
+.reveal p, .reveal li, .reveal td, .reveal th, .reveal blockquote {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* 标题页白字 */
+.reveal-viewport.is-section-divider h1,
+.reveal-viewport.is-section-divider p {
+  color: #ffffff !important;
+}
+
+/* lists */
+.reveal ul { list-style: none; padding-left: 0; margin: 15px 0; }
+.reveal ul li { position: relative; padding-left: 25px; margin-bottom: 10px; }
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+.reveal ul ul li::before { background: var(--muted-color); width: 6px; height: 6px; }
+
+.reveal .slides section {
+  height: 100%;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding);
+  box-sizing: border-box;
+  text-align: left;
+}
+.reveal .slides section.section-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.reveal .slides section > .content { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: var(--content-gap); }
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  background: rgba(255,107,53,0.1);
+  box-shadow: none;
+  width: 100%;
+}
+
+/* text utilities */
+.text-lg { font-size: 18pt !important; }
+.text-xl { font-size: 20pt !important; }
+.text-2xl { font-size: 24pt !important; }
+.text-muted { color: var(--muted-color) !important; }
+.text-center { text-align: center !important; }
+
+/* 圆角卡片加强 */
+.card, .infographic-item { border-radius: var(--box-radius); }
